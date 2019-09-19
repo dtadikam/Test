@@ -1,0 +1,42 @@
+{
+	"name": "copyADB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "description",
+				"type": "varchar"
+			},
+			{
+				"name": "industry",
+				"type": "varchar"
+			},
+			{
+				"name": "level",
+				"type": "varchar"
+			},
+			{
+				"name": "size",
+				"type": "varchar"
+			},
+			{
+				"name": "line_code",
+				"type": "varchar"
+			},
+			{
+				"name": "value",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "server"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

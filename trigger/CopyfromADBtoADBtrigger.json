@@ -1,0 +1,25 @@
+{
+	"name": "CopyfromADBtoADBtrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copyfromADBtoADB",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2019-09-17T10:33:00Z",
+				"endTime": "2019-09-17T10:34:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

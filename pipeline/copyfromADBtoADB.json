@@ -1,0 +1,108 @@
+{
+	"name": "copyfromADBtoADB",
+	"properties": {
+		"activities": [
+			{
+				"name": "copyfromADBtoADB",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource"
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "description",
+									"type": "String"
+								},
+								"sink": {
+									"name": "description",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "industry",
+									"type": "String"
+								},
+								"sink": {
+									"name": "industry",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "level",
+									"type": "String"
+								},
+								"sink": {
+									"name": "level",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "size",
+									"type": "String"
+								},
+								"sink": {
+									"name": "size",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "line_code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "line_code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "value",
+									"type": "String"
+								},
+								"sink": {
+									"name": "value",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "sqldestination",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "sqldestination",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
