@@ -1,1 +1,1 @@
-$(Version)=12dfa61e8
+Version=12dfa61e8
